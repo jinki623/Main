@@ -1,0 +1,14 @@
+[environments.development]
+url = "jdbc:postgresql://localhost:5433/DEV"
+user = "postgres"
+password = "${localSecret.Flyway Desktop b40f5aa8-7a94-408d-8c82-4cab3e466735}"
+schemas = [ "main", "ginarchive", "ginview" ]
+displayName = "Development database"
+
+[environments.deployment]
+user = "postgres"
+password = "${localSecret.Flyway Desktop a98069b1-02ae-40f3-bb51-7d14a7dacd14}"
+
+[environments.shadow]
+user = "postgres"
+password = "${localSecret.Flyway Desktop 2eee0f7e-fa1e-4b83-bde8-c7a417c9eed5}"

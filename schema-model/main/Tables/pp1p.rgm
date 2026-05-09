@@ -1,0 +1,21 @@
+table "main"."pp1p" {
+  primaryKey = {
+    columns = [
+      "id"
+    ]
+    name = "pp1p_pkey"
+    objectType = primaryKey
+  }
+  owner = postgres
+  columns = (
+    column "id" {
+      type = integer
+      null = NOT NULL
+      default = nextval('main.pp1p_id_seq'::regclass)
+    }
+    column "name" {
+      type = character varying(100)
+    }
+  )
+}
+

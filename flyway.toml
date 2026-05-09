@@ -1,0 +1,40 @@
+databaseType = "PostgreSql"
+id = "23863edd-3fbe-4194-9ec8-931c96267902"
+name = "DEV"
+
+[flyway]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+  [flyway.check]
+  majorTolerance = 0
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+enableMigrations = false
+
+  [flywayDesktop.generate]
+  undoScripts = false
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[redgateCompare.postgresql.options.behavior]
+detectRenames = "identical-only"
+
+[redgateCompare.postgresql.options.ignores]
+ignoreNewlinesInTextObjects = "off"
+
+[environments.deployment]
+url = "jdbc:postgresql://localhost:5432/QA"
+schemas = [ "main", "ginarchive", "ginview" ]
+
+[environments.shadow]
+url = "jdbc:postgresql://localhost:5433/DEV_PROD_SHADOW"
+schemas = [ "main", "ginarchive", "ginview" ]
+displayName = "Shadow database"
+provisioner = "clean"
