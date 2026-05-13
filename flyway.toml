@@ -1,6 +1,6 @@
 databaseType = "PostgreSql"
-id = "20aab721-1543-4df5-8737-072a6c6b1563"
-name = "Main"
+id = "62850f7a-afc4-4ac1-9348-9322699774cc"
+name = "Dev"
 
 [flyway]
 locations = [ "filesystem:migrations" ]

@@ -1,0 +1,9 @@
+table "main"."arpan" {
+  owner = postgres
+  columns = (
+    column "name" {
+      type = character varying(10)
+    }
+  )
+}
+
