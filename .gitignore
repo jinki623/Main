@@ -1,6 +1,7 @@
 
 # Flyway ignores
 *.user.toml
+redgate.flyway.toml
 *.artifact
 report.html
 report.json
