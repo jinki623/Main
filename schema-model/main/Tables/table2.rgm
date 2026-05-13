@@ -1,0 +1,20 @@
+table "main"."table2" {
+  primaryKey = {
+    columns = [
+      "id"
+    ]
+    name = "table2_pkey"
+    objectType = primaryKey
+  }
+  owner = postgres
+  columns = (
+    column "id" {
+      type = integer
+      null = NOT NULL
+    }
+    column "name" {
+      type = character varying(10)
+    }
+  )
+}
+
