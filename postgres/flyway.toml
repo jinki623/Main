@@ -1,6 +1,6 @@
 databaseType = "PostgreSql"
-id = "23863edd-3fbe-4194-9ec8-931c96267902"
-name = "DEV"
+id = "232e402f-b87c-4076-9f11-b0f1f053cae1"
+name = "postgres"
 
 [flyway]
 locations = [ "filesystem:migrations" ]
@@ -17,9 +17,6 @@ developmentEnvironment = "development"
 shadowEnvironment = "shadow"
 enableMigrations = false
 
-  [flywayDesktop.generate]
-  undoScripts = false
-
 [redgateCompare]
 filterFile = "filter.rgf"
 
@@ -28,13 +25,3 @@ detectRenames = "identical-only"
 
 [redgateCompare.postgresql.options.ignores]
 ignoreNewlinesInTextObjects = "off"
-
-[environments.deployment]
-url = "jdbc:postgresql://localhost:5432/QA"
-schemas = [ "main", "ginarchive", "ginview" ]
-
-[environments.shadow]
-url = "jdbc:postgresql://localhost:5433/DEV_PROD_SHADOW"
-schemas = [ "main", "ginarchive", "ginview" ]
-displayName = "Shadow database"
-provisioner = "clean"
