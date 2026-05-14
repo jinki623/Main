@@ -1,0 +1,21 @@
+function "main"."mynname(character varying)" {
+  text = """
+
+declare
+begin
+raise notice 'I am TaiminaKhatun';
+end;
+"""
+  returnType = void
+  arguments = <
+    {
+      name = col
+      type = character varying
+      mode = IN
+    }
+
+  >
+  language = plpgsql
+  owner = postgres
+}
+
