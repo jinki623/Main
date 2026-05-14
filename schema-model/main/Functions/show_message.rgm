@@ -1,0 +1,14 @@
+function "main"."show_message()" {
+  text = """
+
+BEGIN
+    RAISE NOTICE 'Hello World Taimina35465876868';
+END;
+"""
+  returnType = void
+  arguments = [
+  ]
+  language = plpgsql
+  owner = postgres
+}
+
