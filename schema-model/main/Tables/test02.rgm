@@ -1,0 +1,9 @@
+table "main"."test02" {
+  owner = postgres
+  columns = (
+    column "col" {
+      type = character varying
+    }
+  )
+}
+
